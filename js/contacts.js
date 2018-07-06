@@ -1,4 +1,4 @@
-/*
+/* /*
 Activité : gestion des contacts
 */
  
@@ -33,7 +33,7 @@ var contacts = [contact1, contact2];
 console.log(contacts);
  
  
- option = ["1: afficher la liste des contacts", "2: ajouter un nouveau contact", "0: quitter"]
+ /* option = ["1: afficher la liste des contacts", "2: ajouter un nouveau contact", "0: quitter"] */
  
 var userChoice = Number(prompt("Choisissez une option"));
  
@@ -41,9 +41,9 @@ while(userChoice !== 0){
     console.log("1 : Lister les contacts");
     console.log("2 : Ajouter un contact");
     console.log("0 : Quitter");
-    var choix = prompt("Choisissez une option :");
+    var userChoice = prompt("Choisissez une option :");
 
-switch(userChoice){
+    switch(userChoice){
     case 1 :    for(var i = 0; i < contacts.length; i++){
                 console.log(contacts[i].showContacts())
                 } 
@@ -60,14 +60,10 @@ switch(userChoice){
                 break;
          
     case 0 :    console.log("Au revoir");
-                break;
-         
-    default :   for (let i = 0; i < option.length; i++) {
-                option[i];
-                }  
-} 
+                break; 
+    } 
 }         
 
  
  
-// TODO : complétez le programme
+// TODO : complétez le programme */
