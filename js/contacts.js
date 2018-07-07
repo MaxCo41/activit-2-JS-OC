@@ -55,12 +55,10 @@ while (userChoice !== 0) {
         options = console.log("1 : Lister les contacts\n2 : Ajouter un contact\n0 : Quitter");
         userChoice = Number(prompt("Choisissez une option"));
 
-    }else if (userChoice == 0) {
-        console.log("Au revoir");
-    
     }else {
         console.log("Vous n'avez pas rentrez une option valable");
         options = console.log("1 : Lister les contacts\n2 : Ajouter un contact\n0 : Quitter");
         userChoice = Number(prompt("Choisissez une option"));
-    }         
+    }
+    console.log("Au revoir");         
 }       
