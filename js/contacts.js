@@ -1,9 +1,9 @@
-/* /*
+/* 
 Activité : gestion des contacts
-*/
- 
 
- 
+TODO : compléter le script de cette activité 2
+*/
+// création du prototype Contacts
 var Contacts = {
     init :  function(prenom, nom){
             this.prenom = prenom;
@@ -13,32 +13,30 @@ var Contacts = {
     showContacts : function(){
        var describe = "Nom : " + this.nom + ", prénom : " + this.prenom;
        return describe;
-    },
-     
-    addContact : function(prenom , nom){
-                var createContacts = Object.create(Contacts);
-                createContacts.init(prenom, nom);
-                return createContacts;
-    }     
+    }    
 };
- 
+
+// init les deux premiers contacts 
 let contact1 = Object.create(Contacts);
 contact1.init("Carole", "Lévisse");
  
 let contact2 = Object.create(Contacts);
 contact2.init("Mélodie", "Nelsonne");
 
+// création du tableau contenant les contacts
 let contacts = [];
+
+// push des deux premiers contacts dans le tableau contacts
 contacts.push(contact1);
 contacts.push(contact2);
-contacts = [contact1, contact2];
- 
- 
-/* let options = ["1: afficher la liste des contacts", "2: ajouter un nouveau contact", "0: quitter"];*/
 
+// Affiche options
 let options = console.log("Bienvenue dans le gestionnaire de contacts !\n1 : Lister les contacts\n2 : Ajouter un contact\n0 : Quitter");
+
+// prompt pour que l'utilisateur choisisse une option
 let userChoice = Number(prompt("Choisissez une option"));
 
+// Boucle while pour que le programme execute les options choisies par l'utilisateur
 while (userChoice !== 0) {    
     if (userChoice == 1){
         for(var i = 0; i < contacts.length; i++){
@@ -56,7 +54,7 @@ while (userChoice !== 0) {
         console.log("Le nouveau contact a été ajouté");       
         options = console.log("1 : Lister les contacts\n2 : Ajouter un contact\n0 : Quitter");
         userChoice = Number(prompt("Choisissez une option"));
-        
+
     }else if (userChoice == 0) {
         console.log("Au revoir");
     
@@ -66,7 +64,3 @@ while (userChoice !== 0) {
         userChoice = Number(prompt("Choisissez une option"));
     }         
 }       
-
- 
- 
-// TODO : complétez le programme */
