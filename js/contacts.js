@@ -60,5 +60,7 @@ while (userChoice !== 0) {
         options = console.log("1 : Lister les contacts\n2 : Ajouter un contact\n0 : Quitter");
         userChoice = Number(prompt("Choisissez une option"));
     }
-    console.log("Au revoir");         
+    if (userChoice == 0) {
+        console.log("Au revoir");    
+    }         
 }       
